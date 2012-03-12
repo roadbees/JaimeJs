@@ -1,0 +1,65 @@
+<!DOCTYPE html> <html> <head>
+	<title>Js Easy Ajax Markup Engine</title> <link rel="stylesheet"
+	type="text/css" href="960.css" /> <link rel="stylesheet" type="text/css"
+	href="style.css" />
+	
+</head>
+
+<body>
+<div id="container" class="container_12">
+	<div class="grid_12">
+		<h1>Js Easy Ajax Markup Engine</h1>
+	</div>
+	
+	<div class="grid_12">
+		<div class="box">
+			<p id="first-text">
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+			nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+			erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+			et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+			Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+			sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+			et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+			accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+			no sea takimata sanctus est Lorem ipsum dolor sit amet.
+			</p>
+		
+			<a href="#" id="makeitred" data-action="click" data-function="makeItRed" >Make it red!</a>				   		
+		</div>
+	</div>
+	
+	<div class="grid_12">
+		<div class="box">
+			<h2>Twitter Lookup</h2>
+			<div id="twitter-target">
+				
+			</div>
+			 <button id="btn-twitter" data-action="click" data-request="http://api.twitter.com/1/users/lookup.json?screen_name=cakephp&callback=?"
+		   data-callback="twitterCallback" data-type="JSONP">Test Request with target</button>
+		</div>
+	</div>
+	
+	
+</div>
+
+<!-- JS Scripts -->
+
+<script type="text/javascript"
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
+
+<!-- Custom ViewFunctions JS -->
+<script type="text/javascript" src="viewfunctions.js"></script>
+<!-- Custom ViewFunctions JS END -->
+
+<!-- JS EasyAjaxMarktupEngine -->
+<script type="text/javascript" src="../../lib/js_easy_ajax_engine.js"></script>
+<!-- JS EasyAjaxMarktupEngine END -->
+<script>
+	$(function(){
+		JsRenderEngine.init();
+	});
+</script>
+	
+
+</body> </html>
