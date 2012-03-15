@@ -8,11 +8,12 @@
 <body>
 <div id="container" class="container_12">
 	<div class="grid_12">
-		<h1>Js Easy Ajax Markup Engine</h1>
+		<h1 data-action="load" data-function="makeItBlue">Js Easy Ajax Markup Engine</h1>
 	</div>
 	
-	<div class="grid_12">
+	<div class="grid_12">		
 		<div class="box">
+			<h2>Example: data-action "click" with data-function</h2>
 			<p id="first-text">
 			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
 			nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
@@ -31,12 +32,54 @@
 	
 	<div class="grid_12">
 		<div class="box">
+			<h2>Example: data-action "click" with data-request and data-callback</h2>
 			<h2>Twitter Lookup</h2>
 			<div id="twitter-target">
 				
 			</div>
 			 <button id="btn-twitter" data-action="click" data-request="http://api.twitter.com/1/users/lookup.json?screen_name=cakephp&callback=?"
 		   data-callback="twitterCallback" data-type="JSONP">Test Request with target</button>
+		</div>
+	</div>
+
+	<div class="grid_12">
+		<div class="box">
+			<h2>Example: data-action "click" with data-request and data-placeholder</h2>
+			<h2>Replace Element</h2>
+			<div id="placeholder-1" style="display:none;"></div>
+			<p class="text">
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+			nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+			erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+			et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+			Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+			sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+			et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+			accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+			no sea takimata sanctus est Lorem ipsum dolor sit amet.
+			</p>
+			 <button id="btn-twitter" data-action="click" data-request="http://api.twitter.com/1/users/lookup.json?screen_name=cakephp&callback=?"
+		   data-placeholder="#placeholder-1" data-type="JSONP">Test Request with target</button>
+		</div>
+	</div>
+
+	<div class="grid_12">
+		<div class="box">
+			<h2>Example: data-action "change" for form elements </h2>
+			
+			<fieldset>
+				<input type="text" data-action="change"> 
+			</fieldset>
+
+			<fieldset>
+				<input type="password" data-action="change"> 
+			</fieldset>
+
+			<fieldset>
+				<input type="radio" name="test" value="1" data-action="change"> 
+				<input type="radio" name="test" value="0" data-action="change"> 
+			</fieldset>
+
 		</div>
 	</div>
 	
@@ -46,7 +89,7 @@
 <!-- JS Scripts -->
 
 <script type="text/javascript"
-src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 <!-- Custom ViewFunctions JS -->
 <script type="text/javascript" src="viewfunctions.js"></script>
