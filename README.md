@@ -3,7 +3,7 @@
 # License
 
 The MIT License (MIT)
-Copyright (c) 2010 Nicolas Traeder
+Copyright (c) 2012 Nicolas Traeder
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -69,7 +69,7 @@ a id of a DOM-Element which will be replaced by the data of the request.
 
 # Example HTML Markup
 
-### Example Buttone with Click Event ###
+### Example Button with click action ###
 ```
 <button id="btn-twitter" data-action="click" data-request="http://api.twitter.com/1/users/lookup.json?screen_name=cakephp&callback=?"
 		   data-callback="twitterCallback" data-type="JSONP">ClickExample</button>
