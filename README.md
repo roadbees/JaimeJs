@@ -22,6 +22,55 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-# Overview
+# Requirements
 
-coming soon... :(
+* JQuery 1.7.1 http://www.jquery.com
+
+# HTML 5 new "data" attributes
+
+### data-action (required)
+
+the event that should bind to the DOM-Element
+
+possible values: click, dblclick, load, change(inputs,select,textarea only), submit(form only) 
+
+### data-function
+
+If this parameter is set a function is called when the event is triggered which was set in "data-action"
+
+### data-request
+
+the request URI for the AJAX request 
+
+### data-type
+
+the AJAX request type
+
+JSONP, POST, GET
+
+
+(only possible if the data-request attribute is set)
+
+### data-callback 
+
+the callback function that gets called after the ajax request finished
+(only possible if the data-request attribute is set)
+
+### data-target
+
+a id of a DOM-Element in which data of a request will be loaded
+(only possible if the data-request attribute is set)
+
+### data-placeholder
+
+a id of a DOM-Element which will be replaced by the data of the request.
+(only possible if the data-request attribute is set)
+
+
+# Example HTML Markup
+
+### Example Buttone with Click Event ###
+```
+<button id="btn-twitter" data-action="click" data-request="http://api.twitter.com/1/users/lookup.json?screen_name=cakephp&callback=?"
+		   data-callback="twitterCallback" data-type="JSONP">ClickExample</button>
+```

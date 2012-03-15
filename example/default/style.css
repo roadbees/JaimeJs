@@ -60,10 +60,61 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
+body {
+  color: #444;
+  font-size:12px;
+}
 
-/* ==|== primary styles =====================================================
-   Author: 
-   ========================================================================== */
+.outer-box {
+  margin-top: 20px;
+}
+
+.box {
+  padding: 10px;
+  border:  1px solid #444;
+}
+
+/** buttons **/
+
+div.buttongroup button {
+  float: left;
+}
+
+button {
+
+font-size: 1em;
+background-color: #F2F2F2;
+background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.15, #F2F2F2), color-stop(0.8, #F9F9F9) );
+background-image: -moz-linear-gradient( center bottom, #F2F2F2 15%, #F9F9F9 80% );
+color: #888;
+text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+text-align: center;
+/*width: 150px;*/
+padding: 5px 10px 5px 10px;
+border: 1px solid #EEE;
+margin-top: 20px;
+margin-right: 25px;
+height: 24px;
+display: block;
+
+
+}
+
+button:hover {
+  color: #666;
+}
+
+button:active {
+  position: relative;
+  top: 1px;
+}
+
+button:visited {
+color: #5C89BC;
+}
 
 
 /* ==|== non-semantic helper classes ======================================== */
