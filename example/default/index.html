@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html> <head>
+ <!DOCTYPE html> <html> <head>
 	<title>Js Easy Ajax Markup Engine</title> <link rel="stylesheet"
 	type="text/css" href="960.css" /> <link rel="stylesheet" type="text/css"
 	href="style.css" />
@@ -38,7 +38,19 @@
 				
 			</div>
 			 <button id="btn-twitter" data-action="click" data-request="http://api.twitter.com/1/users/lookup.json?screen_name=cakephp&callback=?"
-		   data-callback="twitterCallback" data-type="JSONP">Test Request with target</button>
+		   data-callback="twitterCallback" data-type="JSONP">ClickExample</button>
+		</div>
+	</div>
+
+	<div class="grid_12">
+		<div class="box">
+			<h2>Example: data-action "click" with data-request and data-callback</h2>
+			<h2>Twitter Lookup</h2>
+			<div id="twitter-target">
+				
+			</div>
+			 <button id="btn-twitter" data-action="dblclick" data-request="http://api.twitter.com/1/users/lookup.json?screen_name=cakephp&callback=?"
+		   data-callback="twitterCallback" data-type="JSONP">DoubleClick Example</button>
 		</div>
 	</div>
 
@@ -59,26 +71,60 @@
 			no sea takimata sanctus est Lorem ipsum dolor sit amet.
 			</p>
 			 <button id="btn-twitter" data-action="click" data-request="http://api.twitter.com/1/users/lookup.json?screen_name=cakephp&callback=?"
-		   data-placeholder="#placeholder-1" data-type="JSONP">Test Request with target</button>
+		   data-placeholder="#placeholder-1" data-type="JSONP">Click & Placeholder</button>
 		</div>
 	</div>
 
 	<div class="grid_12">
 		<div class="box">
-			<h2>Example: data-action "change" for form elements </h2>
+			<h2>Example: data-action "change"</h2>
 			
+			<p> Example with data-function <p>						
 			<fieldset>
-				<input type="text" data-action="change"> 
+				<input type="text" name="ex1" data-action="change" data-function="changeEx1"> 
+			</fieldset>
+
+			<p> Example with data-request and data-callback<p>
+			<fieldset>
+				<input type="text" name="ex2" data-action="change" data-callback="afterChangeRequest" data-request="http://api.twitter.com/1/users/lookup.json?screen_name=cakephp&callback=?" data-type="JSONP"> 
+			</fieldset>
+
+			<p> Example with data-request and data-target<p>
+			<fieldset>
+				<input type="text" name="ex3" data-action="change" data-request="http://api.twitter.com/1/users/lookup.json?screen_name=cakephp&callback=?" data-type="JSONP" data-target="#change-target"> 
+			</fieldset>
+
+			<p> Example with data-request and data-placeholder<p>
+			<fieldset>
+				<input type="text" name="ex4" data-action="change" data-request="http://api.twitter.com/1/users/lookup.json?screen_name=cakephp&callback=?" data-type="JSONP" data-placeholder="#change-target"> 
+			</fieldset>
+
+			<div id="change-target">
+				
+			</div><!-- /change-target -->
+
+		</div>
+	</div>
+
+	<div class="grid_12">
+		<div class="box">
+			<h2>Example: data-action "submit" with data-callback</h2>
+			
+			<form action="#" method="get" data-action="submit" data-callback="afterSubmit">
+
+			<fieldset>
+				<label for="user">User:</label>				
+				<input name="user" type="text" data-action="change"> 
 			</fieldset>
 
 			<fieldset>
-				<input type="password" data-action="change"> 
-			</fieldset>
+				<label for="user">Password:</label>								
+				<input type="password" name="pass" data-action="change"> 
+			</fieldset>		
 
-			<fieldset>
-				<input type="radio" name="test" value="1" data-action="change"> 
-				<input type="radio" name="test" value="0" data-action="change"> 
-			</fieldset>
+			<button type="submit">Login</button>
+
+			</form>
 
 		</div>
 	</div>

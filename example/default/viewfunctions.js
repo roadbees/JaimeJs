@@ -10,6 +10,12 @@ var ViewFunctions = {
 	
 	"twitterCallback" : function(data) {
 		$('#twitter-target').html(JSON.stringify(data));
+	},
+
+	"afterSubmit" : function(data) {
+		console.log("in afterSubmit" + data);
 	}
+
+
 	
 }
