@@ -1,4 +1,6 @@
-# JS Easy Ajax Markup Engine - JEAME
+# JaimeJS
+
+J`aime JS!! and HTML 5 
 
 # License
 
