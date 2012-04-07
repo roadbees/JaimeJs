@@ -76,3 +76,7 @@ a id of a DOM-Element which will be replaced by the data of the request.
 <button id="btn-twitter" data-action="click" data-request="http://api.twitter.com/1/users/lookup.json?screen_name=cakephp&callback=?"
 		   data-callback="twitterCallback" data-type="JSONP">ClickExample</button>
 ```
+
+#Todo
+
+* better example.

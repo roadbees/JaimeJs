@@ -146,11 +146,21 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <!-- Custom ViewFunctions JS END -->
 
 <!-- JS EasyAjaxMarktupEngine -->
-<script type="text/javascript" src="../../lib/js_easy_ajax_engine.js"></script>
+<script type="text/javascript" src="../../lib/jaimejs.js"></script>
 <!-- JS EasyAjaxMarktupEngine END -->
 <script>
 	$(function(){
-		JsRenderEngine.init();
+		
+		var JaimeOptions = {
+			"beforeExecute" : function() {
+				console.log('beforeExecute');
+			},
+			"afterExecute" : function() {
+				console.log('afterExecute');
+			}
+		}
+		
+		JaimeJs.init(JaimeOptions);
 	});
 </script>
 	
