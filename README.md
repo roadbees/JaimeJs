@@ -68,6 +68,16 @@ a id of a DOM-Element in which data of a request will be loaded
 a id of a DOM-Element which will be replaced by the data of the request.
 (only possible if the data-request attribute is set)
 
+# How to use
+
+Just call the init-function of the JaimeJs - Engine at the end of your htmlpage:
+
+```
+$(function(){
+		JaimeJs.init();
+	});
+
+```
 
 # Example HTML Markup
 
@@ -75,6 +85,25 @@ a id of a DOM-Element which will be replaced by the data of the request.
 ```
 <button id="btn-twitter" data-action="click" data-request="http://api.twitter.com/1/users/lookup.json?screen_name=cakephp&callback=?"
 		   data-callback="twitterCallback" data-type="JSONP">ClickExample</button>
+```
+
+# Options
+
+You can define custom beforeExecute and afterExecute functions which will be called before and after any triggered event.
+
+```JS
+
+var JaimeOptions = {
+			"beforeExecute" : function() {
+				console.log('beforeExecute');
+			},
+			"afterExecute" : function() {
+				console.log('afterExecute');
+			}
+		}
+		
+JaimeJs.init(JaimeOptions);
+
 ```
 
 #Todo
